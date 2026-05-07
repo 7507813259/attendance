@@ -31,6 +31,7 @@ export const staticAttendances = [
     user: staticUsers[1],
     date: new Date().toISOString(),
     status: 'present',
+    selfie: 'https://randomuser.me/api/portraits/men/32.jpg',
     location: { latitude: 37.7749, longitude: -122.4194, address: 'City Hall, 1 Dr Carlton B Goodlett Pl, San Francisco, CA 94102, USA' }
   },
   {
@@ -38,6 +39,7 @@ export const staticAttendances = [
     user: staticUsers[2],
     date: new Date(Date.now() - 3600000).toISOString(), // 1 hour ago
     status: 'absent',
+    selfie: 'https://randomuser.me/api/portraits/women/44.jpg',
     location: { latitude: 37.7749, longitude: -122.4194, address: 'Civic Center Plaza, San Francisco, CA 94102, USA' }
   }
 ];

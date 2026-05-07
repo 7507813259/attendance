@@ -16,10 +16,14 @@ export async function POST(req: Request) {
       return NextResponse.json({ message: 'Invalid token' }, { status: 401 });
     }
 
-    const { status, location } = await req.json();
+    const { status, location, selfie } = await req.json();
 
     if (!status) {
       return NextResponse.json({ message: 'Status is required' }, { status: 400 });
+    }
+
+    if (!selfie) {
+      return NextResponse.json({ message: 'Selfie is required' }, { status: 400 });
     }
 
     const user = db.users.find(u => u._id === decoded.id);
@@ -61,6 +65,7 @@ export async function POST(req: Request) {
       _id: 'a' + Date.now(),
       user: user,
       status,
+      selfie,
       location: {
         ...location,
         address: addressText
