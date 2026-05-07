@@ -40,7 +40,7 @@ export const staticAttendances = [
     date: new Date(Date.now() - 3600000).toISOString(), // 1 hour ago
     status: 'absent',
     selfie: 'https://randomuser.me/api/portraits/women/44.jpg',
-    location: { latitude: 37.7749, longitude: -122.4194, address: 'Civic Center Plaza, San Francisco, CA 94102, USA' }
+    location: { latitude: 37.7748, longitude: -122.4194, address: 'Civic Center Plaza, San Francisco, CA 94102, USA' }
   }
 ];
 
